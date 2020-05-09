@@ -1,3 +1,4 @@
+/*Variables*/
 :root {
     --primary-color: #AB00FF;
     --secondary-color: #D500C7;
@@ -7,23 +8,81 @@
     --white-color: #F1F1F1;
 }
 
+/*GLOBALS*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 100/16=6.25 (1rem = 10px) */
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 body {
     background-color: var(--dark-color-1);
     font-family: 'Roboto', sans-serif;
     color: var(--white-color);
+    min-height: 100vh;
 }
+
+/*HEADINGS*/
 
 .heading {
     font-family: 'brandon-grotesque', sans-serif;
     color: var(--white-color);
     text-transform: uppercase;
 }
+
+.heading--primary {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+    margin-bottom: 1.6rem;
+}
+
+.heading--secondary {
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+.heading--tertiary {
+    font-size: 2.2rem;
+}
+
+.heading--quaternary {
+    font-size: 1.8rem;
+}
+
+/*BUTTONS*/
+.btn {
+    font-family: 'brandon-grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;  
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    box-shadow: -5px 6px 9px rgba(0, 0, 0, .5);
+    border-radius: 3px;
+    border-style: none;
+    padding: 1rem 1.5rem;
+}
+
+.btn-link {
+    color: var(--white-color);
+    line-height: 2rem;
+    font-size: 1.4rem;
+}
+
+.btn--submit {
+    padding: .5rem 1rem;
+    width: 60%;
+}
+
+/*HEADER*/
 
 .header {
     display: flex;
@@ -36,7 +95,7 @@ body {
 .logo {
     font-family:'brandon-grotesque', sans-serif;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: var(--white-color);
     margin-top: .5rem;
@@ -48,7 +107,7 @@ body {
 }
 
 .nav {
-    padding: 1rem;
+    padding: 1.2rem;
 }
 
 .nav__item {
@@ -60,14 +119,16 @@ body {
 .nav__link {
     font-family: 'brandon-grotesque', sans-serif;
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--white-color);
 }
 
+/*STYLES*/
+
 .section-banner {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('/images/astronaut-img-small.jpg');
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('/images/astronaut-img-small.jpg');
     background-size: cover;
     width: 100%;
     height: 400px;
@@ -77,39 +138,52 @@ body {
 .banner-box {
     display: flex;
     flex-direction: column;
-    flex: 0 0 90%;
+    width: 90%;
     margin: auto;
     align-items: center;
     text-align: center;
 }
 
-.heading--primary {
-    font-size: 2.5rem;
-    line-height: 2.6rem;
-    margin-bottom: 1.6rem;
+.banner-box__text {
+    display: none;
 }
 
-.heading--secondary {
-    font-size: 1.8rem;
+.section-next-launch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.next-launch__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.next-launch__details {
     text-align: center;
 }
 
-.heading--tertiary {
-    font-size: 1.5rem;
+.next-launch__text {
+    font-size: 2rem;
+    margin: .5rem 0 2.8rem 0;
 }
 
-.heading--quaternary {
-    font-size: 1.3rem;
+.next-launch__patch {
+    text-align: center;
+    margin-top: 3rem;
 }
 
-.banner__text {
-    display: none;
+.mission-patch-small {
+    max-width: 70%;
 }
 
 .section-links {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
 }
 
 .photo {
@@ -118,38 +192,44 @@ body {
 }
 
 .links-box {
-    padding-bottom: .9rem;
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.links-box__card {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
     margin: auto;
+    max-width: 90%;    
 }
 
-.margin-top {
-    margin-top: 1rem;
-} 
-
-/*BUTTONS*/
-
-.btn {
-    font-family: 'brandon-grotesque', sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;  
-    text-decoration: none;
-    background-color: var(--secondary-color);
-    color: var(--white-color);
-    box-shadow: -5px 6px 9px rgba(0, 0, 0, .5);
-    border-radius: 3px;
-    border-style: none;
-    padding: 1rem 2rem;
+.form__message {
+    font-family: inherit;
+    height: 150px;
 }
 
-.btn-link {
-    color: var(--white-color);
-    line-height: 1.7rem;
+.contact-form label {
+    font-size: 1.6rem;
 }
 
-.btn--submit {
-    padding: .5rem 1rem;
-    width: 60%;
+.form-error {
+    display: none;
+    color: rgb(200, 0, 60);
+    font-size: 1.2rem;
+    padding-bottom: 1.5rem;
 }
 
 /*FOOTER*/
@@ -158,6 +238,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .form {
@@ -165,26 +246,29 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 3rem 0;
-    max-width: 95%;
+    width: 90%;
+}
+
+.form__text {
+    font-size: 1.6rem;
 }
 
 .form__input {
     border-style: none;
-    padding: .6rem 0;
-    width: 300px;
+    padding: 1rem;
+    width: 100%;
     background-color: rgba(255, 255, 255, .7);
-    margin-top: .8rem;
-    margin-bottom: .4rem;
+    margin-top: 1rem;
+    margin-bottom: .8rem;
     border-radius: 3px;
 }
 
 .form__input::placeholder {
     color: var(--dark-color-3);
-    padding-left: .3rem; 
 }
 
 .footer__logo {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .footer-box {
@@ -192,6 +276,7 @@ body {
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    margin-bottom: 3rem;
 }
 
 .footer__social-media {
@@ -204,11 +289,16 @@ body {
 
 .footer__item {
     list-style: none;
-    padding: .4rem 0;
+    padding: .8rem 0;
 }
 
 .footer__link {
     text-decoration: none;
     color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.copyright {
     font-size: 1rem;
+    margin-bottom: .6rem;
 }
