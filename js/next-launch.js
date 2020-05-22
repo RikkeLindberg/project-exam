@@ -29,10 +29,17 @@ function displayNextLaunch(nextLaunch) {
     }
 
     html += `<div class="next-launch__details">
-                <h3 class="heading heading--tertiary">${nextLaunch.mission_name}</h3>
-                <p class="next-launch__date">${nextLaunch.launch_date_utc}</p>
-                <a href="launches.html" class="btn btn--border">See all launches</a>
+                <h3 class="heading heading--tertiary">
+                    ${nextLaunch.mission_name}
+                </h3>
+                <p class="next-launch__date">
+                    ${nextLaunch.launch_date_utc}
+                </p>
+                <a href="launches.html" class="btn btn--border">
+                    See all launches
+                </a>
             </div>
+
             <div class="launch-next__box">
                 <div class="launch-next__details">
                     <div class="api-info__text">
@@ -54,6 +61,7 @@ function displayNextLaunch(nextLaunch) {
                         <span>Details:</span> ${launchDetails}
                     </div>
                 </div>
+                
                 <div class="next-launch__patch launches__patch">
                     <img src="${nextLaunch.links.mission_patch_small}" alt="Image of mission patch" class="mission-patch mission-patch--next">
                 </div>

@@ -23,6 +23,7 @@ async function fetchLaunches() {
 
 fetchLaunches();
 
+//UPCOMING LAUNCHES
 function displayUpcomingLaunches(upcomingLaunches) {
     console.log(upcomingLaunches);
 
@@ -44,6 +45,7 @@ function displayUpcomingLaunches(upcomingLaunches) {
                                 ${upcomingLaunches[i].launch_date_utc}
                         </div>
                     </div>
+
                     <div class="launches__details--row">
                         <div class="launches__details">
                             <div class="api-info__text">
@@ -65,6 +67,7 @@ function displayUpcomingLaunches(upcomingLaunches) {
                                 <span>Details:</span> ${detailsValue}
                             </div>
                         </div>
+                        
                         <div class="launches__patch">
                             <img src="${upcomingLaunches[i].links.mission_patch_small}" alt="Image of mission patch" class="mission-patch">
                         </div> 
@@ -76,6 +79,7 @@ function displayUpcomingLaunches(upcomingLaunches) {
     upcomingLaunchesContainer.innerHTML = html;
 }
 
+//PAST LAUNCHES
 function displayPastLaunches(pastLaunches) {
     console.log(pastLaunches);
 
@@ -98,6 +102,7 @@ function displayPastLaunches(pastLaunches) {
                             ${pastLaunches[i].launch_date_utc}
                         </div>
                     </div>
+
                     <div class="launches__details--row">
                         <div class="launches__details">
                             <div class="api-info__text">
@@ -125,8 +130,8 @@ function displayPastLaunches(pastLaunches) {
                     </div>
                     
                     <div class="api-info__links">
-                        <a href="${pastLaunches[i].links.video_link}">Video &#8594</a>
-                        <a href="${pastLaunches[i].links.wikipedia}">More info &#8594</a>
+                        <a href="${pastLaunches[i].links.video_link}" target="_blank">Video &#8594</a>
+                        <a href="${pastLaunches[i].links.wikipedia}" target="_blank">More info &#8594</a>
                     </div>  
                 </div>
             `;

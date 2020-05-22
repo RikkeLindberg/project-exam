@@ -1,58 +1,58 @@
-const contactForm = document.querySelector(".contact-form");
+const contactForm = document.querySelector(".contact-form__box");
 
-const formName = document.querySelector("#name");
-const formNameError = document.querySelector("#name-error");
-let formNameHasError = false;
+const contactFormName = document.querySelector("#name");
+const contactFormNameError = document.querySelector("#name-error");
+let contactFormNameHasAnError = false;
 
-const formEmail = document.querySelector("#email");
-const formEmailError = document.querySelector("#email-error");
-let formEmailHasError = false;
+const contactFormEmail = document.querySelector("#email");
+const contactFormEmailError = document.querySelector("#email-error");
+let contactFormEmailHasAnError = false;
 
-const formMessage = document.querySelector("#message");
-const formMessageError = document.querySelector("#message-error");
-let formMessageHasError = false;
+const contactFormMessage = document.querySelector("#message");
+const contactFormMessageError = document.querySelector("#message-error");
+let contactFormMessageHasAnError = false;
 
-const submitMessage = document.querySelector("#submit-message");
+const contactFormSubmitMessage = document.querySelector("#submit-message");
 
 contactForm.addEventListener("submit", formValidation);
 
 function formValidation() {
     event.preventDefault();
 
-    const nameValue = formName.value;
+    const nameValue = contactFormName.value;
 
     if (validateLength(nameValue, 2) === true) {
-        formNameError.style.display = "none";
-        formNameHasError = false;
+        contactFormNameError.style.display = "none";
+        contactFormNameHasAnError = false;
     } else {
-        formNameError.style.display = "block";
-        formNameHasError = true;
+        contactFormNameError.style.display = "block";
+        contactFormNameHasAnError = true;
     }
 
-    const emailValue = formEmail.value;
+    const emailValue = contactFormEmail.value;
 
     if (validateEmail(emailValue)) {
-        formEmailError.style.display = "none";
-        formEmailHasError = false;
+        contactFormEmailError.style.display = "none";
+        contactFormEmailHasAnError = false;
     } else {
-        formEmailError.style.display = "block";
-        formEmailHasError = true;
+        contactFormEmailError.style.display = "block";
+        contactFormEmailHasAnError = true;
     }
 
-    const messageValue = formMessage.value;
+    const messageValue = contactFormMessage.value;
 
     if (validateLength(messageValue, 10) === true) {
-        formMessageError.style.display = "none";
-        formMessageHasError = false;
+        contactFormMessageError.style.display = "none";
+        contactFormMessageHasAnError = false;
     } else {
-        formMessageError.style.display = "block";
-        formMessageHasError = true;
+        contactFormMessageError.style.display = "block";
+        contactFormMessageHasAnError = true;
     }
 
-    if (formNameHasError === true || formEmailHasError === true || formMessageHasError === true) {
-        submitMessage.style.display = "none";
+    if (contactFormNameHasAnError === true || contactFormEmailHasAnError === true || contactFormMessageHasAnError === true) {
+        contactFormSubmitMessage.style.display = "none";
     } else {
-        submitMessage.style.display = "block";
+        contactFormSubmitMessage.style.display = "block";
     }
 
 }
