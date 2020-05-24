@@ -53,6 +53,10 @@ function formValidation() {
         contactFormSubmitMessage.style.display = "none";
     } else {
         contactFormSubmitMessage.style.display = "block";
+        contactFormName.value = "";
+        contactFormEmail.value = "";
+        contactFormMessage.value = "";
+        console.log("message was submitted");
     }
 
 }

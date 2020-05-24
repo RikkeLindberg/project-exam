@@ -1,9 +1,9 @@
 /*------------------VARIABLES--------------------------------------*/
 
 :root {
-    --primary-color: #AB00FF;
-    --secondary-color: #D500C7;
-    --secondary-color--faded: rgba(213, 0, 199, 0.753);
+    --purle-color: #AB00FF;
+    --pink-color: #D500C7;
+    --pink-color--faded: rgba(213, 0, 199, 0.657);
     --dark-color-1: #00010A;
     --dark-color-2: #05001E;
     --dark-color-3: #1A1A1A;
@@ -26,7 +26,7 @@
     position: absolute;
     width: 6px;
     height: 6px;
-    background: var(--primary-color);
+    background: var(--purle-color);
     border-radius: 50%;
     animation: lds-default 1.2s linear infinite;
 }
@@ -184,7 +184,7 @@ body {
     font-size: 1.8rem;
     text-transform: uppercase;  
     text-decoration: none;
-    background-color: var(--secondary-color);
+    background-color: var(--pink-color);
     color: var(--white-color);
     border-radius: 3px;
     border-style: none;
@@ -265,7 +265,7 @@ body {
 }
 
 .logo span {
-    color: var(--secondary-color);
+    color: var(--pink-color);
 }
 
 .navigation__item {
@@ -286,7 +286,7 @@ body {
 }
 
 .navigation__link--current {
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--pink-color);
 }
 
 
@@ -299,8 +299,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, .5),
-                        rgba(0, 0, 0, .5)), 
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .65),
+                        rgba(0, 0, 0, .65)), 
                         url('../images/astronaut-img-small.jpg');
     background-size: cover;
     max-width: 100%;
@@ -714,49 +714,6 @@ body {
 }
 
 
-/*-------BUTTONS-HOVER:-------*/
-
-.btn:hover {
-    background-color: transparent;
-    border: var(--border-2);
-    transition: .5s;
-}
-
-.btn:active {
-    outline: none;
-    color: var(--secondary-color);
-} 
-
-.btn--border:hover {
-    background-color: var(--secondary-color);
-    transition: .5s;
-}
-
-.btn--border:active {
-    outline: none;
-    color: var(--dark-color-1);
-}
-
-.btn-link:hover, 
-.navigation__link:hover,
-.footer-navigation__link:hover,
-.footer-icon__link:hover,
-.api-info__links a:hover,
-.contact__links:hover {
-    color: var(--secondary-color);
-    transition: .5s;
-}
-
-.btn-link:active, 
-.navigation__link:active,
-.footer-navigation__link:active,
-.footer-icon__link:active,
-.api-info__links a:active,
-.contact__links:active {
-    color: var(--secondary-color--faded);
-}
-
-
 @media only screen and (min-width: 480px) {
 
     /*-------HEADER/NAVIGATION-------*/
@@ -824,6 +781,49 @@ body {
 
 
 @media only screen and (min-width: 700px) {
+
+    /*-------BUTTONS-HOVER:/ACTIVE:-------*/
+
+    .btn:hover {
+        background-color: transparent;
+        border: var(--border-2);
+        transition: .5s;
+    }
+
+    .btn:active {
+        outline: none;
+        color: var(--pink-color);
+    } 
+
+    .btn--border:hover {
+        background-color: var(--pink-color);
+        transition: .5s;
+    }
+
+    .btn--border:active {
+        outline: none;
+        color: var(--dark-color-1);
+    }
+
+    .btn-link:hover, 
+    .navigation__link:hover,
+    .footer-navigation__link:hover,
+    .footer-icon__link:hover,
+    .api-info__links a:hover,
+    .contact__links:hover {
+        color: var(--pink-color);
+        transition: .5s;
+    }
+
+    .btn-link:active, 
+    .navigation__link:active,
+    .footer-navigation__link:active,
+    .footer-icon__link:active,
+    .api-info__links a:active,
+    .contact__links:active {
+        color: var(--pink-color--faded);
+    }
+
     
     /*-------HEADER-------*/
 
@@ -842,8 +842,8 @@ body {
     /*-------HOME-PAGE-------*/
 
     .banner-section {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, .5), 
-                        rgba(0, 0, 0, .5)), 
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, .65), 
+                        rgba(0, 0, 0, .65)), 
                         url('../images/astronaut-img-large.jpg');
     }
 
@@ -854,6 +854,7 @@ body {
         margin: 8rem 0;
         width: 97%;
     }
+
 
     /*-------LAUNCHES-PAGE-------*/
 
@@ -871,6 +872,7 @@ body {
         display: inline-block;
         max-width: 50rem;
     }
+    
 
     /*-------CONTACT-PAGE-------*/
 
@@ -957,7 +959,7 @@ body {
     .footer-logo::before,
     .footer-logo::after {
         content: "";
-        background-color: var(--primary-color);
+        background-color: var(--pink-color);
         display: flex;
         height: 1px;
         width: 50%;
